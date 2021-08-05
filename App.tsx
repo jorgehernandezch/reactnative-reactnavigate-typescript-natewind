@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 import { Lato_100Thin, Lato_300Light, Lato_400Regular, Lato_700Bold } from '@expo-google-fonts/lato';
 import { Login } from './src/screens/login';
 import AppLoading from 'expo-app-loading';
+import { Background } from './src/components/Background';
 
 export default function App() {
 
@@ -19,13 +20,13 @@ export default function App() {
   }
 
   return (
-    <>
+    <Background>
       <StatusBar 
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
       <Login />
-    </>
+    </Background>
   );
 }
