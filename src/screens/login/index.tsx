@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StatusBar } from 'react-native';
+import { Text, View } from 'react-native';
 import { styles } from './style';
 import { Button } from '../../components/Button';
 
@@ -7,12 +7,8 @@ import { Button } from '../../components/Button';
 export function Login() {
   return (
     <View style={styles.container}>
-      <StatusBar 
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      />
-      <Text style={styles.text}>Test</Text>
+      
+      <Text style={styles.text}>Grupo Alpha</Text>
       <Button/>
     </View>
   );
