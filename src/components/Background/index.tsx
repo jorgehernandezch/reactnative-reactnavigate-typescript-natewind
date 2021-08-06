@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { style } from "./style";
+import { style } from "./styles";
 import { theme } from "../../assets/styles/theme";
 
 type Props ={
