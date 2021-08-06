@@ -15,7 +15,7 @@ export function Login() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Grupo Alpha</Text>
-      <Button onPress={handleLogin}/>
+      <Button text="Home" onPress={handleLogin}/>
     </View>
   );
 }
