@@ -3,13 +3,14 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 
 type Props ={
-  onPress?:()=>void
+  onPress?:()=>void,
+  text : string
 }
 
-export function Button({onPress}:Props) {
+export function Button({onPress, text}:Props) {
   return(
-    <TouchableOpacity onPress={onPress} style={styles.button}>
-      <Text>Button</Text>
+    <TouchableOpacity onPress={onPress} style={styles.primary}>
+      <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
 }
