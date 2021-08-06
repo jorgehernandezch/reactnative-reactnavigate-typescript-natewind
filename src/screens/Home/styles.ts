@@ -5,7 +5,9 @@ import { theme } from "../../assets/styles/theme";
 export const styles = StyleSheet.create({
   container:{
     flex: 1,
-    marginTop: Constants.statusBarHeight + 20
+    marginTop: Constants.statusBarHeight + 20,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   text:{
     color: theme.colors.principalText,

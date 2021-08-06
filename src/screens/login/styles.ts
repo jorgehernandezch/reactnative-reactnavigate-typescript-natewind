@@ -13,8 +13,5 @@ export const styles = StyleSheet.create({
     color: theme.colors.principalText,
     fontFamily: theme.fonts.title400,
     fontSize:24,
-  },
-  button:{
-    width: 170,
   }
 });
