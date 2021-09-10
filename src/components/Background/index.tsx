@@ -12,7 +12,7 @@ export function Background({children}:Props){
   return(
     <LinearGradient
       style={style.container}
-      colors={[theme.colors.primary,theme.colors.secondary]}
+      colors={[theme.colors.primary,theme.colors.primary]}
     >
       {children}
     </LinearGradient>

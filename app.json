@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "doutorhub-app",
-    "slug": "doutorhub-app",
+    "name": "Grupo Alpha",
+    "slug": "grupo-alpha-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#2d4f6c"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +22,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#2d4f6c"
       }
     },
     "web": {
