@@ -11,6 +11,5 @@ export function Routes(){
         <AuthRoutes/>
       </NavigationContainer>
     </Background>
-    
   );
 }
