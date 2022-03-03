@@ -7,7 +7,7 @@ import Logo from '../../assets/img/logo.png';
 
 export function Login() {
   
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
 
   function handleLogin(){
     navigation.navigate("Home")

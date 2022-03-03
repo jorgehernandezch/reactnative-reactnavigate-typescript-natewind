@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 
 export function Home() {
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
 
   function handleHome(){
     navigation.navigate("Login")
