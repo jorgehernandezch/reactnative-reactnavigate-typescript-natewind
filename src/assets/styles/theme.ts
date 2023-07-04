@@ -10,5 +10,6 @@ export const theme = {
     title400: 'Lato_400Regular',
     title300: 'Lato_300Light',
     title100: 'Lato_100Thin',
+    body: 'Montserrat_400Regular'
   }
 };

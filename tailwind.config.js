@@ -11,7 +11,7 @@ module.exports = {
           500:'#4476a2',
           700:'#2d4f6c'
         }
-      },
+      }
     },
   },
   plugins: [],

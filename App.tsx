@@ -3,6 +3,7 @@ import React,{ useEffect, useCallback } from 'react';
 import { StatusBar, SafeAreaView } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Lato_100Thin, Lato_300Light, Lato_400Regular, Lato_700Bold } from '@expo-google-fonts/lato';
+import { Montserrat_400Regular } from '@expo-google-fonts/montserrat';
 import { Routes } from './src/routes';
 import * as SplashScreen from 'expo-splash-screen';
 
@@ -12,7 +13,8 @@ export default function App() {
     Lato_100Thin,
     Lato_300Light,
     Lato_400Regular,
-    Lato_700Bold
+    Lato_700Bold,
+    Montserrat_400Regular
   });
 
   useEffect(() => {

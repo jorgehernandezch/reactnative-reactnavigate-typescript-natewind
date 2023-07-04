@@ -16,6 +16,7 @@ export function AuthRoutes(){
           backgroundColor: theme.colors.white
         }
       }}
+      
     >
       <Screen 
         name="Login"
