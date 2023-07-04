@@ -1,16 +1,23 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import { styles } from "./styles";
+import { Text, TouchableOpacity } from "react-native";
+import { styled } from "nativewind";
 
 type Props ={
   onPress?:()=>void,
-  text:string
+  children:JSX.Element
 }
 
-export function Button({onPress, text}:Props) {
+function ButtonStyled({onPress,children,...rest}:Props) {
   return(
-    <TouchableOpacity onPress={onPress} style={styles.primary}>
-      <Text style={styles.text}>{text}</Text>
+    <TouchableOpacity 
+      className="flex justify-center items-center p-4 min-w-[90px] rounded-md" 
+      onPress={onPress} 
+      {...rest}
+    >
+      {children}
     </TouchableOpacity>
   );
 }
+
+const Button = styled(ButtonStyled)
+export {Button}

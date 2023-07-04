@@ -38,9 +38,9 @@ export default function App() {
 
   return (
     <>
-      <SafeAreaView  style={{ flex: 1 }} onLayout={onLayoutRootView}>
+      <SafeAreaView  style={{ flex:1 }} onLayout={onLayoutRootView}>
         <StatusBar 
-          barStyle="light-content"
+          barStyle="dark-content"
           backgroundColor="transparent"
           translucent
         />

@@ -1,9 +1,8 @@
 export const theme = {
   colors:{
-    primary:'#2d4f6c',
-    secondary:'#4476a2',
-    principalText: '#F0F0F0',
-    primaryButton: '#03D3F4',
+    white:'#FFFFFF',
+    sky500:'#4476a2',
+    sky700:'#2d4f6c'
   },
 
   fonts:{

@@ -5,7 +5,14 @@ module.exports = {
     "./src/components/**/*.tsx"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'sky':{
+          500:'#4476a2',
+          700:'#2d4f6c'
+        }
+      },
+    },
   },
   plugins: [],
 }
