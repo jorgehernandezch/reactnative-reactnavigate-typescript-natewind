@@ -4,7 +4,7 @@ import { styles } from "./styles";
 
 type Props ={
   onPress?:()=>void,
-  text : string
+  text:string
 }
 
 export function Button({onPress, text}:Props) {

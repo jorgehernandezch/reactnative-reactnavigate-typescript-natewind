@@ -1,7 +1,7 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Home } from "../screens/Home";
 import { Login } from "../screens/Login";
+import { TabRoutes } from "./tab.routes";
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -20,8 +20,8 @@ export function AuthRoutes(){
         component={Login}
       />
       <Screen 
-        name="Home"
-        component={Home}
+        name="Inicio"
+        component={TabRoutes}
       />
     </Navigator>
   );

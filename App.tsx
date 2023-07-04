@@ -1,8 +1,9 @@
+import 'react-native-gesture-handler';
 import React,{ useEffect, useCallback } from 'react';
 import { StatusBar, SafeAreaView } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Lato_100Thin, Lato_300Light, Lato_400Regular, Lato_700Bold } from '@expo-google-fonts/lato';
-import { Routes } from './src/Routes';
+import { Routes } from './src/routes';
 import * as SplashScreen from 'expo-splash-screen';
 
 export default function App() {

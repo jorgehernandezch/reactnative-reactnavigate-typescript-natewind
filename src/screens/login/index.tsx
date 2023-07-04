@@ -1,23 +1,10 @@
-import React from 'react';
-import { Text, View, Image } from 'react-native';
-import { styles } from './styles';
-import { Button } from '../../components/Button';
-import { useNavigation } from '@react-navigation/native';
-import Logo from '../../assets/img/logo.png';
+import { View, Text, Button } from "react-native"
 
-export function Login() {
-  
-  const navigation = useNavigation<any>();
-
-  function handleLogin(){
-    navigation.navigate("Home")
-  }
-
-  return (
-    <View style={styles.container}>
-      <Image source={Logo} style={styles.logo} />
-      <Text style={styles.text}>Grupo Alpha</Text>
-      <Button text="Home" onPress={handleLogin}/>
+export const Login = ({ navigation }:{navigation:any}) => {
+  return(
+    <View>
+      <Text>Login</Text>
+      <Button title="Entrar" onPress={() => navigation.navigate("Inicio")} />
     </View>
-  );
+  )
 }
