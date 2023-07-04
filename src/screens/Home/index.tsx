@@ -10,7 +10,7 @@ export const Home = ({navigation}:{navigation:any}) => {
       <Text className="text-sky-700 text-lg uppercase mb-1" style={{ fontFamily:theme.fonts.body }}>
         Go Details Page
       </Text>      
-      <Button className="bg-sky-700"onPress={()=>navigation.navigate('Details')}>
+      <Button className="bg-sky-700" onPress={()=>navigation.navigate('Details')}>
         <Text className="text-sky-100">Details</Text>
       </Button>
       <Text className="text-sky-700 text-lg font-bold uppercase mb-1 mt-4">

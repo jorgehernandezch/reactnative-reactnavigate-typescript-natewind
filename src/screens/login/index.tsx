@@ -1,6 +1,5 @@
 import { View, Text} from "react-native"
 import { Button } from "../../components/Button"
-
 export const Login = ({ navigation }:{navigation:any}) => {
   return(
     <View className="flex-1 justify-center items-center">
