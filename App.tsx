@@ -6,6 +6,8 @@ import { Lato_100Thin, Lato_300Light, Lato_400Regular, Lato_700Bold } from '@exp
 import { Montserrat_400Regular } from '@expo-google-fonts/montserrat';
 import { Routes } from './src/routes';
 import * as SplashScreen from 'expo-splash-screen';
+import { AuthProvider } from './src/context/AuthContext';
+import { Background } from './src/components/Background';
 
 export default function App() {
 
@@ -39,15 +41,17 @@ export default function App() {
   }
 
   return (
-    <>
+    <AuthProvider>
       <SafeAreaView  style={{ flex:1 }} onLayout={onLayoutRootView}>
         <StatusBar 
           barStyle="dark-content"
           backgroundColor="transparent"
           translucent
         />
-        <Routes/>
+        <Background>
+          <Routes/>
+        </Background>
       </SafeAreaView>
-    </>
+    </AuthProvider>
   );
 }

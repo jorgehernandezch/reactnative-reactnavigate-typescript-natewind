@@ -1,21 +1,26 @@
-import { View, Text} from "react-native"
+import { View, Text, TextInput} from "react-native"
 import { Button } from "../../components/Button"
-export const Login = ({ navigation }:{navigation:any}) => {
+import { useState } from "react"
+import { useAuth } from "../../context/AuthContext";
+
+export const Login = () => {
+  const[email,setEmail] = useState('');
+  const[password,setPassword] = useState('');
+  const { onRegister, onLogin } = useAuth();
+
+  const login = async () => {
+    const result = await onLogin!(email,password);
+    if(result && result.error)
+    {
+      alert(result.msg);
+    }
+  }
+
   return(
     <View className="flex-1 justify-center items-center">
-      <Text className="text-sky-700 font-extrabold text-xl text-center uppercase mb-3">
-        React Native
-      </Text>
-      <Text className="text-sky-700 text-md font-semibold uppercase text-center mb-2">
-        with
-      </Text>
-      <Text className="text-sky-700 text-md font-semibold uppercase text-center mb-16">
-        React Navigation,Typescript and NativeWind
-      </Text>
-      <Text className="text-black font-semibold text-lg uppercase mb-2">Login Page</Text>
-      <Button className="bg-sky-700" onPress={()=>navigation.navigate('Inicio')}>
-        <Text className="text-sky-100 font-bold uppercase">Sign In</Text>
-      </Button>
+      <TextInput  onChangeText={(text:string) => setEmail(text)} value={email} className="w-48 h-12 bg-slate-300" />
+      <TextInput placeholder="password" secureTextEntry={true} onChangeText={(text:string) => setPassword(text)} value={password} className="w-48 h-12 bg-slate-300" />
+      <Button onPress={login} className="bg-cyan-600"><Text>Entrar</Text></Button>
     </View>
   )
 }

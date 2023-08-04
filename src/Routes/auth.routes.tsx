@@ -1,35 +1,34 @@
-import React from "react";
+import { Text } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Login } from "../screens/Login";
 import { Details } from "../screens/Details";
 import { TabRoutes } from "./tab.routes";
 import { theme } from "../assets/styles/theme";
+import { Button } from "../components/Button";
+import { useAuth } from "../context/AuthContext";
 
-const { Navigator, Screen } = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export function AuthRoutes(){
   return(
-    <Navigator
+    <Stack.Navigator
+    initialRouteName="Inicio"
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
         contentStyle:{
           backgroundColor: theme.colors.white
         }
       }}
       
     >
-      <Screen 
-        name="Login"
-        component={Login}
-      />
-      <Screen 
+      <Stack.Screen 
         name="Inicio"
         component={TabRoutes}
       />
-      <Screen
+      <Stack.Screen
         name="Details"
         component={Details}
       />
-    </Navigator>
+    </Stack.Navigator>
   );
 }
