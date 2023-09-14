@@ -1,11 +1,10 @@
-import { Text, View } from 'react-native'
+import { PageAuth } from '../../components/Page/Auth'
+import { Header } from '../../components/Header'
 
-export const Profile = () => {
+export const Profile = ({ navigation }: { navigation: any }) => {
   return (
-    <View className="flex-1 bg-white">
-      <Text className="text-sky-700 text-xl font-bold font-[montserratRegular] uppercase mb-6">
-        PROFILE PAGE
-      </Text>
-    </View>
+    <PageAuth>
+      <Header navigation={navigation} page="PROFILE PAGE" />
+    </PageAuth>
   )
 }
