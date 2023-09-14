@@ -47,3 +47,8 @@ export interface FormLoginDataProps {
 export interface PageGuestProps {
   children: ReactNode
 }
+
+export interface HeaderProps {
+  page?: string
+  navigation: any
+}
