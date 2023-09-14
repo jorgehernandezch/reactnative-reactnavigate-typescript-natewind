@@ -3,7 +3,8 @@ import { type TouchableOpacityProps } from 'react-native'
 
 export interface ButtonProps extends TouchableOpacityProps {
   onPress?: () => void
-  children: JSX.Element
+  text: string
+  extraClasses?: React.ComponentProps<'div'>['className']
 }
 
 export interface BackgroundProps {

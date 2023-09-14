@@ -15,6 +15,7 @@ module.exports = {
         latoRegular: ['Lato_400Regular'],
         latoBold: ['Lato_700Bold'],
         montserratRegular: ['Montserrat_400Regular'],
+        montserratBold: ['Montserrat_700Bold'],
       },
     },
   },
