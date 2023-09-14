@@ -1,10 +1,12 @@
-import { Header } from '../../components/Header'
 import { PageAuth } from '../../components/Page/Auth'
+import { Text } from 'react-native'
 
 export const Details = ({ navigation }: { navigation: any }) => {
   return (
-    <PageAuth>
-      <Header navigation={navigation} page="Details Page" />
+    <PageAuth onPress={() => navigation.goBack()} page="Details">
+      <Text className="font-[latoRegular] text-base text-sky-700 uppercase">
+        Details
+      </Text>
     </PageAuth>
   )
 }

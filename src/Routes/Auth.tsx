@@ -1,13 +1,13 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Details } from '../screens/Details'
-import { TabRoutes } from './Tab'
+import { Payments } from '../screens/Payments'
+import { DrawerRoutes } from './Drawer'
 
 const Stack = createNativeStackNavigator()
 
 export function AuthRoutes() {
   return (
     <Stack.Navigator
-      initialRouteName="Inicio"
       screenOptions={{
         headerShown: false,
         contentStyle: {
@@ -15,8 +15,9 @@ export function AuthRoutes() {
         },
       }}
     >
-      <Stack.Screen name="Inicio" component={TabRoutes} />
-      <Stack.Screen name="Details" component={Details} />
+      <Stack.Screen name="Start" component={DrawerRoutes} />
+      <Stack.Screen name="details" component={Details} />
+      <Stack.Screen name="payments" component={Payments} />
     </Stack.Navigator>
   )
 }

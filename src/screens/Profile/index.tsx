@@ -1,10 +1,12 @@
 import { PageAuth } from '../../components/Page/Auth'
-import { Header } from '../../components/Header'
+import { Text } from 'react-native'
 
 export const Profile = ({ navigation }: { navigation: any }) => {
   return (
-    <PageAuth>
-      <Header navigation={navigation} page="PROFILE PAGE" />
+    <PageAuth onPress={() => navigation.goBack()} page="Profile">
+      <Text className="font-[latoRegular] text-base text-sky-700 uppercase">
+        Profile
+      </Text>
     </PageAuth>
   )
 }

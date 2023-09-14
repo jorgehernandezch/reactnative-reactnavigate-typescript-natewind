@@ -48,7 +48,13 @@ export interface PageGuestProps {
   children: ReactNode
 }
 
+export interface PageAuthProps {
+  children: ReactNode
+  page: string
+  onPress: () => void
+}
+
 export interface HeaderProps {
   page?: string
-  navigation: any
+  onPress: () => void
 }
