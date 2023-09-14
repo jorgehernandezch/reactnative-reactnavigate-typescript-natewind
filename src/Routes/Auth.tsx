@@ -11,7 +11,7 @@ export function AuthRoutes() {
       screenOptions={{
         headerShown: true,
         contentStyle: {
-          backgroundColor: '#FFFFFF',
+          backgroundColor: '#FF0000',
         },
       }}
     >

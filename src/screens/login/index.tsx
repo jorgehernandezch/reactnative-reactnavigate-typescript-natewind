@@ -1,4 +1,4 @@
-import { View, Text, TextInput } from 'react-native'
+import { View, TextInput, Alert } from 'react-native'
 import { Button } from '../../components/Button'
 import { useState } from 'react'
 import { useAuth } from '../../context/AuthContext'
@@ -10,19 +10,20 @@ export const Login = () => {
 
   const login = async () => {
     const result = await onLogin!(email, password)
-    if (result?.error) {
-      alert(result.msg)
+    console.log('Index-13', result)
+    if (result) {
+      Alert.alert(result.message)
     }
   }
 
   return (
-    <View className="flex-1 justify-center items-center">
+    <View className="flex-1 justify-center items-center bg-slate-500">
       <TextInput
         onChangeText={(text: string) => {
           setEmail(text)
         }}
         value={email}
-        className="w-48 h-12 bg-slate-300"
+        className="w-full h-12 bg-slate-300"
       />
       <TextInput
         placeholder="password"
@@ -31,11 +32,9 @@ export const Login = () => {
           setPassword(text)
         }}
         value={password}
-        className="w-48 h-12 bg-slate-300"
+        className="w-full h-12 bg-slate-300"
       />
-      <Button onPress={login} className="bg-cyan-600">
-        <Text className="font-montserrat font-normal uppercase">Entrar</Text>
-      </Button>
+      <Button onPress={login} text="Entrar" />
     </View>
   )
 }
