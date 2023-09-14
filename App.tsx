@@ -16,11 +16,11 @@ import { Background } from './src/components/Background'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    Lato_100Thin,
-    Lato_300Light,
-    Lato_400Regular,
-    Lato_700Bold,
-    Montserrat_400Regular,
+    latoThin: Lato_100Thin,
+    latoLight: Lato_300Light,
+    latoRegular: Lato_400Regular,
+    latoBold: Lato_700Bold,
+    montserratRegular: Montserrat_400Regular,
   })
 
   useEffect(() => {

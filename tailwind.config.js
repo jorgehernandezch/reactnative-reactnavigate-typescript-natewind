@@ -9,6 +9,13 @@ module.exports = {
           700: '#2d4f6c',
         },
       },
+      fontFamily: {
+        latoThin: ['Lato_100Thin'],
+        latoLight: ['Lato_300Light'],
+        latoRegular: ['Lato_400Regular'],
+        latoBold: ['Lato_700Bold'],
+        montserratRegular: ['Montserrat_400Regular'],
+      },
     },
   },
   plugins: [],

@@ -34,7 +34,7 @@ export const Login = () => {
         className="w-48 h-12 bg-slate-300"
       />
       <Button onPress={login} className="bg-cyan-600">
-        <Text>Entrar</Text>
+        <Text className="font-montserrat font-normal uppercase">Entrar</Text>
       </Button>
     </View>
   )
