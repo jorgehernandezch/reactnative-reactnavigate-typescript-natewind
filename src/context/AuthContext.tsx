@@ -45,17 +45,21 @@ export const AuthProvider = ({ children }: any) => {
   const login = async (email: string, password: string) => {
     try {
       const result = await axios.post(`${API_URL}/login`, { email, password })
-      console.log('AuthContext-60', result.data.data.token)
+      console.log('AuthContext-60', result.data)
 
-      setAuthState({
-        token: result.data.data.token,
-        authenticated: true,
-      })
+      if (result.data.data) {
+        setAuthState({
+          token: result.data.data.token,
+          authenticated: true,
+        })
 
-      axios.defaults.headers.common.Authorization = `Bearer ${result.data.data.token}`
-      await SecureStore.setItemAsync(TOKEN_KEY, result.data.data.token)
+        axios.defaults.headers.common.Authorization = `Bearer ${result.data.data.token}`
+        await SecureStore.setItemAsync(TOKEN_KEY, result.data.data.token)
+      } else {
+        return result.data
+      }
     } catch (e) {
-      return { error: true, msg: (e as any).response.data.message }
+      return { message: (e as any).response.data.message }
     }
   }
 

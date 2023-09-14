@@ -8,7 +8,10 @@ import {
   Lato_400Regular,
   Lato_700Bold,
 } from '@expo-google-fonts/lato'
-import { Montserrat_400Regular } from '@expo-google-fonts/montserrat'
+import {
+  Montserrat_400Regular,
+  Montserrat_700Bold,
+} from '@expo-google-fonts/montserrat'
 import { Routes } from './src/routes'
 import * as SplashScreen from 'expo-splash-screen'
 import { AuthProvider } from './src/context/AuthContext'
@@ -21,6 +24,7 @@ export default function App() {
     latoRegular: Lato_400Regular,
     latoBold: Lato_700Bold,
     montserratRegular: Montserrat_400Regular,
+    montserratBold: Montserrat_700Bold,
   })
 
   useEffect(() => {
