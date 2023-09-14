@@ -9,7 +9,13 @@ export const TabRoutes = () => {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      screenOptions={{ headerShown: false, tabBarShowLabel: false }}
+      screenOptions={{
+        headerShown: false,
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          marginTop: 0,
+        },
+      }}
     >
       <Tab.Screen
         name="Home"

@@ -9,9 +9,9 @@ export function AuthRoutes() {
     <Stack.Navigator
       initialRouteName="Inicio"
       screenOptions={{
-        headerShown: true,
+        headerShown: false,
         contentStyle: {
-          backgroundColor: '#FF0000',
+          backgroundColor: '#FFFFFF',
         },
       }}
     >
