@@ -1,4 +1,3 @@
-import React from 'react'
 import { Text, View } from 'react-native'
 import { Button } from '../../components/Button'
 import { useAuth } from '../../context/AuthContext'

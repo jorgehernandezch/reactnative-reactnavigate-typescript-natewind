@@ -1,7 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Details } from '../screens/Details'
 import { TabRoutes } from './Tab'
-import { theme } from '../assets/styles/theme'
 
 const Stack = createNativeStackNavigator()
 
@@ -12,7 +11,7 @@ export function AuthRoutes() {
       screenOptions={{
         headerShown: true,
         contentStyle: {
-          backgroundColor: theme.colors.white,
+          backgroundColor: '#FFFFFF',
         },
       }}
     >

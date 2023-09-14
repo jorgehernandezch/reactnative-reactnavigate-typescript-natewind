@@ -1,16 +1,7 @@
 import { useState, useEffect, useContext, createContext } from 'react'
+import { type AuthProps, type AuthStateProps } from '../@types/components'
 import axios from 'axios'
 import * as SecureStore from 'expo-secure-store'
-
-interface AuthProps {
-  authState?: {
-    token: string | null
-    authenticated: boolean | null
-  }
-  onRegister?: (email: string, password: string) => Promise<any>
-  onLogin?: (email: string, password: string) => Promise<any>
-  onLogout?: () => Promise<any>
-}
 
 const TOKEN_KEY = 'my-jwt'
 export const API_URL =
@@ -22,10 +13,7 @@ export const useAuth = () => {
 }
 
 export const AuthProvider = ({ children }: any) => {
-  const [authState, setAuthState] = useState<{
-    token: string | null
-    authenticated: boolean | null
-  }>({
+  const [authState, setAuthState] = useState<AuthStateProps>({
     token: null,
     authenticated: null,
   })

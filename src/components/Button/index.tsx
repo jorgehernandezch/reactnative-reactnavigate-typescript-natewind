@@ -1,13 +1,8 @@
 import React from 'react'
 import { TouchableOpacity } from 'react-native'
-import { styled } from 'nativewind'
+import type { ButtonProps } from '../../@types/components'
 
-interface Props {
-  onPress?: () => void
-  children: JSX.Element
-}
-
-function ButtonStyled({ onPress, children, ...rest }: Props) {
+export const Button = ({ onPress, children, ...rest }: ButtonProps) => {
   return (
     <TouchableOpacity
       className="flex justify-center items-center p-4 min-w-[90px] rounded-md"
@@ -18,6 +13,3 @@ function ButtonStyled({ onPress, children, ...rest }: Props) {
     </TouchableOpacity>
   )
 }
-
-const Button = styled(ButtonStyled)
-export { Button }
