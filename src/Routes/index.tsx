@@ -1,8 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native'
-import { AuthRoutes } from './auth.routes'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { useAuth } from '../context/AuthContext'
 import { Login } from '../screens/Login'
+import { AuthRoutes } from './Auth'
 
 export function Routes() {
   const Stack = createNativeStackNavigator()

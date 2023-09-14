@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Details } from '../screens/Details'
-import { TabRoutes } from './tab.routes'
+import { TabRoutes } from './Tab'
 import { theme } from '../assets/styles/theme'
 
 const Stack = createNativeStackNavigator()
