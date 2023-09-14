@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler'
 import React, { useEffect, useCallback } from 'react'
-import { StatusBar, SafeAreaView } from 'react-native'
+import { StatusBar, SafeAreaView, Platform } from 'react-native'
 import { useFonts } from 'expo-font'
 import {
   Lato_100Thin,
@@ -51,11 +51,15 @@ export default function App() {
   return (
     <AuthProvider>
       <SafeAreaView style={{ flex: 1 }} onLayout={onLayoutRootView}>
-        <StatusBar
-          barStyle="dark-content"
-          backgroundColor="transparent"
-          translucent
-        />
+        {Platform.OS === 'android' ? (
+          <StatusBar
+            backgroundColor="#61dafb"
+            translucent
+            barStyle="dark-content"
+          />
+        ) : (
+          <StatusBar barStyle="dark-content" />
+        )}
         <Background>
           <Routes />
         </Background>
