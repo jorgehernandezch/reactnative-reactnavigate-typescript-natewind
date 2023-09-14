@@ -14,7 +14,7 @@ interface AuthProps {
 
 const TOKEN_KEY = 'my-jwt'
 export const API_URL =
-  'https://calhafacil-app-web-dev-41749b1cbf4f.herokuapp.com/api/v1'
+  'http://jh-laravel10-api-f65ecffdcabe.herokuapp.com/api/v1'
 const AuthContext = createContext<AuthProps>({})
 
 export const useAuth = () => {
@@ -57,18 +57,15 @@ export const AuthProvider = ({ children }: any) => {
   const login = async (email: string, password: string) => {
     try {
       const result = await axios.post(`${API_URL}/login`, { email, password })
-      console.log('AuthContext-43', result.data.data.token)
-      if (result.data?.data.token) {
-        setAuthState({
-          token: result.data.data.token,
-          authenticated: true,
-        })
-        axios.defaults.headers.common.Authorization = `Bearer ${result.data.token}`
-        await SecureStore.setItemAsync(TOKEN_KEY, result.data.token)
-        alert('if' + result.data.message)
-      } else {
-        alert('else' + result.data.message)
-      }
+      console.log('AuthContext-60', result.data.data.token)
+
+      setAuthState({
+        token: result.data.data.token,
+        authenticated: true,
+      })
+
+      axios.defaults.headers.common.Authorization = `Bearer ${result.data.data.token}`
+      await SecureStore.setItemAsync(TOKEN_KEY, result.data.data.token)
     } catch (e) {
       return { error: true, msg: (e as any).response.data.message }
     }
