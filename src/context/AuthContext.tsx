@@ -6,6 +6,7 @@ import * as SecureStore from 'expo-secure-store'
 const TOKEN_KEY = 'my-jwt'
 export const API_URL =
   'http://jh-laravel10-api-f65ecffdcabe.herokuapp.com/api/v1'
+
 const AuthContext = createContext<AuthProps>({})
 
 export const useAuth = () => {
